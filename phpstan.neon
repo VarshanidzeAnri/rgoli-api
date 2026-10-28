@@ -1,0 +1,14 @@
+includes:
+    - vendor/larastan/larastan/extension.neon
+
+parameters:
+    level: 8
+    paths:
+        - app
+        - database/seeders
+        - routes
+    tmpDir: storage/framework/phpstan
+
+    # Sanctum documents currentAccessToken() as PersonalAccessToken, but under
+    # Sanctum::actingAs() it is a TransientToken, so runtime instanceof checks are real.
+    treatPhpDocTypesAsCertain: false

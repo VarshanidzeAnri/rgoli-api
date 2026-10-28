@@ -1,0 +1,1 @@
+O:23:"PHPStan\Cache\CacheItem":2:{s:11:"variableKey";s:74:"v2-e7f12f5fe859c9d49d145e15fd4090427555c94e823c6b50eeb37d9daba8a690-8.4.24";s:4:"data";a:3:{s:7:"classes";a:1:{s:49:"illuminate\database\eloquent\relations\morphpivot";b:1;}s:9:"functions";a:0:{}s:9:"constants";a:0:{}}}

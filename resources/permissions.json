@@ -1,0 +1,122 @@
+{
+  "$comment": "Single source of truth for permissions and default roles. The frontend copy lives in rgoli-front/src/lib/permissions.ts and is checked against this file by `npm run check:permissions`.",
+  "groups": {
+    "projects": [
+      "projects.view",
+      "projects.view_all",
+      "projects.create",
+      "projects.update",
+      "projects.delete",
+      "projects.manage_members",
+      "phases.manage"
+    ],
+    "issues": [
+      "issues.view",
+      "issues.create",
+      "issues.update",
+      "issues.move",
+      "issues.delete",
+      "issues.comment",
+      "sprints.manage"
+    ],
+    "files": ["files.view", "files.upload", "files.delete_own", "files.delete_any"],
+    "map": ["map.view", "locations.update"],
+    "finance": ["finance.view", "client_payments.manage", "salary.request", "salary.approve"],
+    "reports": ["reports.view", "reports.export"],
+    "admin": ["users.view", "users.manage", "roles.manage", "system.export", "system.reset_demo"]
+  },
+  "roles": {
+    "owner": {
+      "name": "Owner",
+      "permissions": "*"
+    },
+    "project_manager": {
+      "name": "Project Manager",
+      "permissions": [
+        "projects.view",
+        "projects.create",
+        "projects.update",
+        "projects.manage_members",
+        "phases.manage",
+        "issues.view",
+        "issues.comment",
+        "issues.create",
+        "issues.update",
+        "issues.move",
+        "issues.delete",
+        "sprints.manage",
+        "files.view",
+        "files.upload",
+        "files.delete_own",
+        "files.delete_any",
+        "map.view",
+        "locations.update",
+        "salary.request",
+        "reports.view",
+        "users.view"
+      ]
+    },
+    "architect": {
+      "name": "Architect",
+      "permissions": [
+        "projects.view",
+        "phases.manage",
+        "issues.view",
+        "issues.comment",
+        "issues.create",
+        "issues.update",
+        "issues.move",
+        "files.view",
+        "files.upload",
+        "files.delete_own",
+        "map.view",
+        "salary.request"
+      ]
+    },
+    "interior_designer": {
+      "name": "Interior Designer",
+      "permissions": [
+        "projects.view",
+        "issues.view",
+        "issues.comment",
+        "issues.create",
+        "issues.update",
+        "issues.move",
+        "files.view",
+        "files.upload",
+        "files.delete_own",
+        "map.view",
+        "salary.request"
+      ]
+    },
+    "finance_manager": {
+      "name": "Finance Manager",
+      "permissions": [
+        "projects.view",
+        "projects.view_all",
+        "files.view",
+        "files.upload",
+        "files.delete_own",
+        "finance.view",
+        "client_payments.manage",
+        "salary.request",
+        "salary.approve",
+        "reports.view",
+        "reports.export"
+      ]
+    },
+    "member": {
+      "name": "Member",
+      "permissions": [
+        "projects.view",
+        "issues.view",
+        "issues.comment",
+        "files.view",
+        "files.upload",
+        "files.delete_own",
+        "map.view",
+        "salary.request"
+      ]
+    }
+  }
+}

@@ -1,0 +1,47 @@
+<?php
+
+return [
+    'status' => [
+        'todo' => 'To do',
+        'progress' => 'In progress',
+        'review' => 'Review',
+        'blocked' => 'Blocked',
+        'done' => 'Done',
+    ],
+    'priority' => [
+        'low' => 'Low',
+        'medium' => 'Medium',
+        'high' => 'High',
+        'critical' => 'Critical',
+    ],
+    'payment_status' => [
+        'pending' => 'Pending',
+        'approved' => 'Approved',
+        'rejected' => 'Rejected',
+    ],
+    'discipline' => [
+        'architecture' => 'Architecture',
+        'interior' => 'Interior',
+        'construction' => 'Construction',
+        'finance' => 'Finance',
+    ],
+    'sprint_state' => [
+        'planned' => 'Planned',
+        'active' => 'Active',
+        'completed' => 'Completed',
+    ],
+    'payment_method' => [
+        'cash' => 'Cash',
+        'bank_transfer' => 'Bank transfer',
+        'card' => 'Card',
+        'other' => 'Other',
+    ],
+    'file_type' => [
+        'pdf' => 'PDF',
+        'dwg' => 'DWG drawing',
+        'image' => 'Image',
+        'doc' => 'Document',
+        'zip' => 'Archive',
+        'other' => 'Other',
+    ],
+];

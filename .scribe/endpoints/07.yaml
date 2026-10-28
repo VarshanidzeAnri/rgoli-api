@@ -1,0 +1,1318 @@
+name: Issues
+description: ''
+endpoints:
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/v1/issues
+    metadata:
+      custom: []
+      groupName: Issues
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'List visible issues.'
+      description: ''
+      authenticated: true
+      deprecated: false
+    headers:
+      Authorization: 'Bearer {TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters:
+      project_id:
+        custom: []
+        name: project_id
+        description: ''
+        required: false
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      status:
+        custom: []
+        name: status
+        description: Comma-separated.
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      priority:
+        custom: []
+        name: priority
+        description: ''
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      assignee:
+        custom: []
+        name: assignee
+        description: 'User id.'
+        required: false
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      mine:
+        custom: []
+        name: mine
+        description: ''
+        required: false
+        example: false
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      sprint:
+        custom: []
+        name: sprint
+        description: ''
+        required: false
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      backlog:
+        custom: []
+        name: backlog
+        description: 'Not in an open sprint.'
+        required: false
+        example: false
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      due_from:
+        custom: []
+        name: due_from
+        description: Y-m-d
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      due_to:
+        custom: []
+        name: due_to
+        description: Y-m-d
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      search:
+        custom: []
+        name: search
+        description: ''
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      sort:
+        custom: []
+        name: sort
+        description: 'due_date, priority, created_at, position, points.'
+        required: false
+        example: architecto
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanQueryParameters:
+      project_id: 16
+      status: architecto
+      priority: architecto
+      assignee: 16
+      mine: false
+      sprint: 16
+      backlog: false
+      due_from: architecto
+      due_to: architecto
+      search: architecto
+      sort: architecto
+    bodyParameters:
+      search:
+        custom: []
+        name: search
+        description: 'Must not be greater than 120 characters.'
+        required: false
+        example: b
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      sort:
+        custom: []
+        name: sort
+        description: 'Must not be greater than 40 characters.'
+        required: false
+        example: 'n'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      per_page:
+        custom: []
+        name: per_page
+        description: 'Must be between 1 and 100.'
+        required: false
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      page:
+        custom: []
+        name: page
+        description: 'Must be at least 1.'
+        required: false
+        example: 66
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      project_id:
+        custom: []
+        name: project_id
+        description: ''
+        required: false
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      status:
+        custom: []
+        name: status
+        description: 'Must not be greater than 100 characters.'
+        required: false
+        example: 'n'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      priority:
+        custom: []
+        name: priority
+        description: ''
+        required: false
+        example: high
+        type: string
+        enumValues:
+          - low
+          - medium
+          - high
+          - critical
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      assignee:
+        custom: []
+        name: assignee
+        description: ''
+        required: false
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      mine:
+        custom: []
+        name: mine
+        description: ''
+        required: false
+        example: true
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      sprint:
+        custom: []
+        name: sprint
+        description: ''
+        required: false
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      backlog:
+        custom: []
+        name: backlog
+        description: ''
+        required: false
+        example: false
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      due_from:
+        custom: []
+        name: due_from
+        description: 'Must be a valid date.'
+        required: false
+        example: '2026-10-28T18:16:24'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      due_to:
+        custom: []
+        name: due_to
+        description: 'Must be a valid date.'
+        required: false
+        example: '2026-10-28T18:16:24'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+    cleanBodyParameters:
+      search: b
+      sort: 'n'
+      per_page: 1
+      page: 66
+      project_id: 16
+      status: 'n'
+      priority: high
+      assignee: 16
+      mine: true
+      sprint: 16
+      backlog: false
+      due_from: '2026-10-28T18:16:24'
+      due_to: '2026-10-28T18:16:24'
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Please sign in."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          content-language: en
+          x-request-id: dd027ddc-0c5b-41db-ab78-d11375a6386d
+          access-control-allow-origin: 'http://localhost:5173'
+          access-control-expose-headers: 'Content-Disposition, Content-Language, X-Request-Id'
+        description: null
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/v1/issues/board
+    metadata:
+      custom: []
+      groupName: Issues
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Board columns keyed by status. Accepts the list filters.'
+      description: ''
+      authenticated: true
+      deprecated: false
+    headers:
+      Authorization: 'Bearer {TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      search:
+        custom: []
+        name: search
+        description: 'Must not be greater than 120 characters.'
+        required: false
+        example: b
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      sort:
+        custom: []
+        name: sort
+        description: 'Must not be greater than 40 characters.'
+        required: false
+        example: 'n'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      per_page:
+        custom: []
+        name: per_page
+        description: 'Must be between 1 and 100.'
+        required: false
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      page:
+        custom: []
+        name: page
+        description: 'Must be at least 1.'
+        required: false
+        example: 66
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      project_id:
+        custom: []
+        name: project_id
+        description: ''
+        required: false
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      status:
+        custom: []
+        name: status
+        description: 'Must not be greater than 100 characters.'
+        required: false
+        example: 'n'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      priority:
+        custom: []
+        name: priority
+        description: ''
+        required: false
+        example: critical
+        type: string
+        enumValues:
+          - low
+          - medium
+          - high
+          - critical
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      assignee:
+        custom: []
+        name: assignee
+        description: ''
+        required: false
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      mine:
+        custom: []
+        name: mine
+        description: ''
+        required: false
+        example: true
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      sprint:
+        custom: []
+        name: sprint
+        description: ''
+        required: false
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      backlog:
+        custom: []
+        name: backlog
+        description: ''
+        required: false
+        example: true
+        type: boolean
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      due_from:
+        custom: []
+        name: due_from
+        description: 'Must be a valid date.'
+        required: false
+        example: '2026-10-28T18:16:24'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      due_to:
+        custom: []
+        name: due_to
+        description: 'Must be a valid date.'
+        required: false
+        example: '2026-10-28T18:16:24'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+    cleanBodyParameters:
+      search: b
+      sort: 'n'
+      per_page: 1
+      page: 66
+      project_id: 16
+      status: 'n'
+      priority: critical
+      assignee: 16
+      mine: true
+      sprint: 16
+      backlog: true
+      due_from: '2026-10-28T18:16:24'
+      due_to: '2026-10-28T18:16:24'
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Please sign in."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          content-language: en
+          x-request-id: dd0d6a5c-62c1-4c76-9bb4-4b280151ef47
+          access-control-allow-origin: 'http://localhost:5173'
+          access-control-expose-headers: 'Content-Disposition, Content-Language, X-Request-Id'
+        description: null
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: api/v1/issues
+    metadata:
+      custom: []
+      groupName: Issues
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Create an issue in a visible project.'
+      description: ''
+      authenticated: true
+      deprecated: false
+    headers:
+      Authorization: 'Bearer {TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      project_id:
+        custom: []
+        name: project_id
+        description: 'Must match an existing stored value.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      title:
+        custom: []
+        name: title
+        description: 'Must not be greater than 255 characters.'
+        required: true
+        example: 'n'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      description:
+        custom: []
+        name: description
+        description: 'Must not be greater than 20000 characters.'
+        required: false
+        example: 'Animi quos velit et fugiat.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      status:
+        custom: []
+        name: status
+        description: ''
+        required: false
+        example: done
+        type: string
+        enumValues:
+          - todo
+          - progress
+          - review
+          - blocked
+          - done
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      priority:
+        custom: []
+        name: priority
+        description: ''
+        required: false
+        example: medium
+        type: string
+        enumValues:
+          - low
+          - medium
+          - high
+          - critical
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      due_date:
+        custom: []
+        name: due_date
+        description: 'Must be a valid date.'
+        required: false
+        example: '2026-10-28T18:16:24'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      points:
+        custom: []
+        name: points
+        description: 'Must be at least 1. Must not be greater than 100.'
+        required: false
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      assignee_ids:
+        custom: []
+        name: assignee_ids
+        description: 'Must match an existing stored value.'
+        required: false
+        example:
+          - 16
+        type: 'integer[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      sprint_id:
+        custom: []
+        name: sprint_id
+        description: 'Must match an existing stored value.'
+        required: false
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+    cleanBodyParameters:
+      project_id: 16
+      title: 'n'
+      description: 'Animi quos velit et fugiat.'
+      status: done
+      priority: medium
+      due_date: '2026-10-28T18:16:24'
+      points: 1
+      assignee_ids:
+        - 16
+      sprint_id: 16
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Please sign in."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          content-language: en
+          x-request-id: 78dde0d8-aca6-4dfd-9592-fcd1a15eb766
+          access-control-allow-origin: 'http://localhost:5173'
+          access-control-expose-headers: 'Content-Disposition, Content-Language, X-Request-Id'
+        description: null
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: 'api/v1/issues/{id}'
+    metadata:
+      custom: []
+      groupName: Issues
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Show an issue.'
+      description: ''
+      authenticated: true
+      deprecated: false
+    headers:
+      Authorization: 'Bearer {TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        custom: []
+        name: id
+        description: 'The ID of the issue.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Please sign in."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          content-language: en
+          x-request-id: e795dce2-352a-4d02-aa19-43573f336e9f
+          access-control-allow-origin: 'http://localhost:5173'
+          access-control-expose-headers: 'Content-Disposition, Content-Language, X-Request-Id'
+        description: null
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - PATCH
+    uri: 'api/v1/issues/{id}'
+    metadata:
+      custom: []
+      groupName: Issues
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Quick edit: title, description, priority, due date, points, assignees.'
+      description: ''
+      authenticated: true
+      deprecated: false
+    headers:
+      Authorization: 'Bearer {TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        custom: []
+        name: id
+        description: 'The ID of the issue.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      title:
+        custom: []
+        name: title
+        description: 'Must not be greater than 255 characters.'
+        required: false
+        example: b
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      description:
+        custom: []
+        name: description
+        description: 'Must not be greater than 20000 characters.'
+        required: false
+        example: 'Et animi quos velit et fugiat.'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      priority:
+        custom: []
+        name: priority
+        description: ''
+        required: false
+        example: medium
+        type: string
+        enumValues:
+          - low
+          - medium
+          - high
+          - critical
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      due_date:
+        custom: []
+        name: due_date
+        description: 'Must be a valid date.'
+        required: false
+        example: '2026-10-28T18:16:24'
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+      points:
+        custom: []
+        name: points
+        description: 'Must be at least 1. Must not be greater than 100.'
+        required: false
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      assignee_ids:
+        custom: []
+        name: assignee_ids
+        description: 'Must match an existing stored value.'
+        required: false
+        example:
+          - 16
+        type: 'integer[]'
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      title: b
+      description: 'Et animi quos velit et fugiat.'
+      priority: medium
+      due_date: '2026-10-28T18:16:24'
+      points: 1
+      assignee_ids:
+        - 16
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Please sign in."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          content-language: en
+          x-request-id: 907e2fb7-72c8-43f3-8961-fc8fe69cc6bb
+          access-control-allow-origin: 'http://localhost:5173'
+          access-control-expose-headers: 'Content-Disposition, Content-Language, X-Request-Id'
+        description: null
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - PATCH
+    uri: 'api/v1/issues/{issue_id}/move'
+    metadata:
+      custom: []
+      groupName: Issues
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Move on the board: new status, placed directly below after_id (null = top).'
+      description: ''
+      authenticated: true
+      deprecated: false
+    headers:
+      Authorization: 'Bearer {TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      issue_id:
+        custom: []
+        name: issue_id
+        description: 'The ID of the issue.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      issue_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      status:
+        custom: []
+        name: status
+        description: ''
+        required: true
+        example: blocked
+        type: string
+        enumValues:
+          - todo
+          - progress
+          - review
+          - blocked
+          - done
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      after_id:
+        custom: []
+        name: after_id
+        description: 'Must match an existing stored value.'
+        required: false
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: true
+        deprecated: false
+    cleanBodyParameters:
+      status: blocked
+      after_id: 16
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Please sign in."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          content-language: en
+          x-request-id: b4c8d3c6-6fa7-49a7-978d-58f32ee32fdb
+          access-control-allow-origin: 'http://localhost:5173'
+          access-control-expose-headers: 'Content-Disposition, Content-Language, X-Request-Id'
+        description: null
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - DELETE
+    uri: 'api/v1/issues/{id}'
+    metadata:
+      custom: []
+      groupName: Issues
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Delete an issue (soft).'
+      description: ''
+      authenticated: true
+      deprecated: false
+    headers:
+      Authorization: 'Bearer {TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        custom: []
+        name: id
+        description: 'The ID of the issue.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Please sign in."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          content-language: en
+          x-request-id: a2c53ad1-b85e-49e9-b25d-9abf5f557100
+          access-control-allow-origin: 'http://localhost:5173'
+          access-control-expose-headers: 'Content-Disposition, Content-Language, X-Request-Id'
+        description: null
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: 'api/v1/issues/{issue_id}/comments'
+    metadata:
+      custom: []
+      groupName: Issues
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Comments of an issue, newest first.'
+      description: ''
+      authenticated: true
+      deprecated: false
+    headers:
+      Authorization: 'Bearer {TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      issue_id:
+        custom: []
+        name: issue_id
+        description: 'The ID of the issue.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      issue_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Please sign in."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          content-language: en
+          x-request-id: e5cab512-bb06-42da-9ca8-cc9ef2c13e83
+          access-control-allow-origin: 'http://localhost:5173'
+          access-control-expose-headers: 'Content-Disposition, Content-Language, X-Request-Id'
+        description: null
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: 'api/v1/issues/{issue_id}/comments'
+    metadata:
+      custom: []
+      groupName: Issues
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Add a comment (issues.comment).'
+      description: ''
+      authenticated: true
+      deprecated: false
+    headers:
+      Authorization: 'Bearer {TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      issue_id:
+        custom: []
+        name: issue_id
+        description: 'The ID of the issue.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      issue_id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      body:
+        custom: []
+        name: body
+        description: 'Must not be greater than 5000 characters.'
+        required: true
+        example: b
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      body: b
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Please sign in."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          content-language: en
+          x-request-id: 71c3de38-44af-4f09-a8c9-307ed0fff89f
+          access-control-allow-origin: 'http://localhost:5173'
+          access-control-expose-headers: 'Content-Disposition, Content-Language, X-Request-Id'
+        description: null
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - PATCH
+    uri: 'api/v1/comments/{id}'
+    metadata:
+      custom: []
+      groupName: Issues
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Edit own comment.'
+      description: ''
+      authenticated: true
+      deprecated: false
+    headers:
+      Authorization: 'Bearer {TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        custom: []
+        name: id
+        description: 'The ID of the comment.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      id: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      body:
+        custom: []
+        name: body
+        description: 'Must not be greater than 5000 characters.'
+        required: true
+        example: b
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      body: b
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Please sign in."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          content-language: en
+          x-request-id: 9e4a5fb3-b8ce-467a-8d69-1043c737586e
+          access-control-allow-origin: 'http://localhost:5173'
+          access-control-expose-headers: 'Content-Disposition, Content-Language, X-Request-Id'
+        description: null
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - DELETE
+    uri: 'api/v1/comments/{id}'
+    metadata:
+      custom: []
+      groupName: Issues
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Delete own comment.'
+      description: ''
+      authenticated: true
+      deprecated: false
+    headers:
+      Authorization: 'Bearer {TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        custom: []
+        name: id
+        description: 'The ID of the comment.'
+        required: true
+        example: 16
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      id: 16
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Please sign in."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          content-language: en
+          x-request-id: 8fb7ef2a-4e2a-488b-8e48-580e0247a22f
+          access-control-allow-origin: 'http://localhost:5173'
+          access-control-expose-headers: 'Content-Disposition, Content-Language, X-Request-Id'
+        description: null
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
+    controller: null
+    method: null
+    route: null

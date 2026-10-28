@@ -1,0 +1,376 @@
+name: 'Admin · Roles'
+description: ''
+endpoints:
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/v1/roles
+    metadata:
+      custom: []
+      groupName: 'Admin · Roles'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Roles with permissions and user counts.'
+      description: ''
+      authenticated: true
+      deprecated: false
+    headers:
+      Authorization: 'Bearer {TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Please sign in."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          content-language: en
+          x-request-id: 91887e21-0e10-4e6f-955b-1ffcd573fb96
+          access-control-allow-origin: 'http://localhost:5173'
+          access-control-expose-headers: 'Content-Disposition, Content-Language, X-Request-Id'
+        description: null
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - GET
+    uri: api/v1/permissions
+    metadata:
+      custom: []
+      groupName: 'Admin · Roles'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Permission catalog grouped by module.'
+      description: ''
+      authenticated: true
+      deprecated: false
+    headers:
+      Authorization: 'Bearer {TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Please sign in."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          content-language: en
+          x-request-id: 760c8dc4-f9e0-405d-99eb-0c6e3678b3d4
+          access-control-allow-origin: 'http://localhost:5173'
+          access-control-expose-headers: 'Content-Disposition, Content-Language, X-Request-Id'
+        description: null
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - POST
+    uri: api/v1/roles
+    metadata:
+      custom: []
+      groupName: 'Admin · Roles'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Create a role (roles.manage).'
+      description: ''
+      authenticated: true
+      deprecated: false
+    headers:
+      Authorization: 'Bearer {TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters: []
+    cleanUrlParameters: []
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        custom: []
+        name: name
+        description: 'Must not be greater than 80 characters.'
+        required: true
+        example: b
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      permissions:
+        custom: []
+        name: permissions
+        description: ''
+        required: false
+        example:
+          - files.view
+        type: 'string[]'
+        enumValues:
+          - projects.view
+          - projects.view_all
+          - projects.create
+          - projects.update
+          - projects.delete
+          - projects.manage_members
+          - phases.manage
+          - issues.view
+          - issues.create
+          - issues.update
+          - issues.move
+          - issues.delete
+          - issues.comment
+          - sprints.manage
+          - files.view
+          - files.upload
+          - files.delete_own
+          - files.delete_any
+          - map.view
+          - locations.update
+          - finance.view
+          - client_payments.manage
+          - salary.request
+          - salary.approve
+          - reports.view
+          - reports.export
+          - users.view
+          - users.manage
+          - roles.manage
+          - system.export
+          - system.reset_demo
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      name: b
+      permissions:
+        - files.view
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Please sign in."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          content-language: en
+          x-request-id: d16bc838-0f04-4725-9a4e-d2b7c58de8af
+          access-control-allow-origin: 'http://localhost:5173'
+          access-control-expose-headers: 'Content-Disposition, Content-Language, X-Request-Id'
+        description: null
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - PATCH
+    uri: 'api/v1/roles/{id}'
+    metadata:
+      custom: []
+      groupName: 'Admin · Roles'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Rename a role and/or set its permissions.'
+      description: ''
+      authenticated: true
+      deprecated: false
+    headers:
+      Authorization: 'Bearer {TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        custom: []
+        name: id
+        description: 'The ID of the role.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters:
+      name:
+        custom: []
+        name: name
+        description: 'Must not be greater than 80 characters.'
+        required: false
+        example: b
+        type: string
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+      permissions:
+        custom: []
+        name: permissions
+        description: ''
+        required: false
+        example:
+          - system.reset_demo
+        type: 'string[]'
+        enumValues:
+          - projects.view
+          - projects.view_all
+          - projects.create
+          - projects.update
+          - projects.delete
+          - projects.manage_members
+          - phases.manage
+          - issues.view
+          - issues.create
+          - issues.update
+          - issues.move
+          - issues.delete
+          - issues.comment
+          - sprints.manage
+          - files.view
+          - files.upload
+          - files.delete_own
+          - files.delete_any
+          - map.view
+          - locations.update
+          - finance.view
+          - client_payments.manage
+          - salary.request
+          - salary.approve
+          - reports.view
+          - reports.export
+          - users.view
+          - users.manage
+          - roles.manage
+          - system.export
+          - system.reset_demo
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanBodyParameters:
+      name: b
+      permissions:
+        - system.reset_demo
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Please sign in."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          content-language: en
+          x-request-id: 53105f6e-836d-420c-83a3-42610c812d0f
+          access-control-allow-origin: 'http://localhost:5173'
+          access-control-expose-headers: 'Content-Disposition, Content-Language, X-Request-Id'
+        description: null
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
+    controller: null
+    method: null
+    route: null
+  -
+    custom: []
+    httpMethods:
+      - DELETE
+    uri: 'api/v1/roles/{id}'
+    metadata:
+      custom: []
+      groupName: 'Admin · Roles'
+      groupDescription: ''
+      subgroup: ''
+      subgroupDescription: ''
+      title: 'Delete a custom role that has no users.'
+      description: ''
+      authenticated: true
+      deprecated: false
+    headers:
+      Authorization: 'Bearer {TOKEN}'
+      Content-Type: application/json
+      Accept: application/json
+    urlParameters:
+      id:
+        custom: []
+        name: id
+        description: 'The ID of the role.'
+        required: true
+        example: 1
+        type: integer
+        enumValues: []
+        exampleWasSpecified: false
+        nullable: false
+        deprecated: false
+    cleanUrlParameters:
+      id: 1
+    queryParameters: []
+    cleanQueryParameters: []
+    bodyParameters: []
+    cleanBodyParameters: []
+    fileParameters: []
+    responses:
+      -
+        custom: []
+        status: 401
+        content: '{"message":"Please sign in."}'
+        headers:
+          cache-control: 'no-cache, private'
+          content-type: application/json
+          content-language: en
+          x-request-id: c3f490ad-f59b-4320-a6f1-22400c080c30
+          access-control-allow-origin: 'http://localhost:5173'
+          access-control-expose-headers: 'Content-Disposition, Content-Language, X-Request-Id'
+        description: null
+    responseFields: []
+    auth:
+      - headers
+      - Authorization
+      - 'Bearer 6g43cv8PD1aE5beadkZfhV6'
+    controller: null
+    method: null
+    route: null

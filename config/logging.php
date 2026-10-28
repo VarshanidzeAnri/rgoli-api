@@ -1,5 +1,6 @@
 <?php
 
+use Monolog\Formatter\JsonFormatter;
 use Monolog\Handler\NullHandler;
 use Monolog\Handler\StreamHandler;
 use Monolog\Handler\SyslogUdpHandler;
@@ -71,6 +72,22 @@ return [
             'level' => env('LOG_LEVEL', 'debug'),
             'max_files' => env('LOG_DAILY_DAYS', 14),
             'replace_placeholders' => true,
+        ],
+
+        'auth' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/auth.log'),
+            'level' => 'info',
+            'days' => 90,
+            'formatter' => JsonFormatter::class,
+        ],
+
+        'finance' => [
+            'driver' => 'daily',
+            'path' => storage_path('logs/finance.log'),
+            'level' => 'info',
+            'days' => 365,
+            'formatter' => JsonFormatter::class,
         ],
 
         'monthly' => [
